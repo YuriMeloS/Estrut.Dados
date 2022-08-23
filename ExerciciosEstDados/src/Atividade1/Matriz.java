@@ -6,7 +6,7 @@ public class Matriz {
 
 	public static void main(String[] args) {
 		
-		int[][] matriz = new int[3][4]; // inicializa a matriz com zeros
+		int[][] matriz = new int[3][4]; //
         Random randomico = new Random();
         for(int linhas=0;linhas<3;linhas++){
         	for(int cols=0;cols<4;cols++){
