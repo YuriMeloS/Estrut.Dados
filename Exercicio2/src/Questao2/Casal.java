@@ -8,23 +8,43 @@ public class Casal {
 	public static void main(String[] args) {
 		
 		Scanner ler = new Scanner(System.in);
-		List<Integer> lista1 = new ArrayList<Integer>();
-		for(int i=0; i<=10; i++) {
-        	lista1.add(i);
-        }
-        
-        List<Integer> list2 = new ArrayList<Integer>();
-        for(int i=0; i<=10; i++) {
-        	list2.add(i);
-        }
-        
-        List<Integer> concatenated_list = new ArrayList<Integer>();
-        concatenated_list.addAll(lista1);
-        concatenated_list.addAll(list2);
-        
-        System.out.println("list1: " + lista1);
-        System.out.println("list2: " + list2);
-        System.out.println("Concatenated list: " + concatenated_list);
+		ListaLigada listaNoiva = new ListaLigada();
+		ListaLigada listaNoivo = new ListaLigada();
+		
+		ListaLigada listaGeral = new ListaLigada();
+		String nome;
+		int tamanho;
+		for(int i=0; i<6;i++) {
+			System.out.println("Digite o convidado da Noiva");
+			nome = ler.nextLine();
+			listaNoiva.adicionar(nome);
+		}
+		for(int i=0;i<4;i++) {
+			System.out.println("Digite o convidado do Noivo");
+			nome = ler.nextLine();
+			listaNoivo.adicionar(nome);
+		}
+		System.out.println("****Lista da Noiva****");
+		for(int i=0; i<listaNoiva.getTamanho();i++) {
+			System.out.println(listaNoiva.get(i).getValor());
+		}
+		System.out.println("****Lista do Noivo****");
+		for(int i=0; i<listaNoivo.getTamanho();i++) {
+			System.out.println(listaNoivo.get(i).getValor());
+		}
+		if(listaNoiva.getTamanho()>=listaNoivo.getTamanho()){
+			tamanho = listaNoiva.getTamanho();
+		}
+		else 
+			tamanho=listaNoiva.getTamanho();
+		
+		for(int i=0; i<tamanho;i++) {
+			if(i<listaNoiva.getTamanho())
+				listaGeral.adicionar(listaNoiva.get(i).getValor());
+			if(i<listaNoivo.getTamanho())
+				listaGeral.adicionar(listaNoivo.get(i).getValor());
+			
+		}
 				
 		
 	}
