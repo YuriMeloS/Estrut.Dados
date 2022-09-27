@@ -16,13 +16,13 @@ class Main {
         while (scanner.hasNextLine())
             texto.add(scanner.nextLine());
 
-        if (!frases.isEmpty()) {
+        if (!texto.isEmpty()) {
             while (top10Frases.size() < 10)
-                top10Frases.add(frases.pop());
+                top10Frases.add(texto.pop());
 
             System.out.println("Frases depois da decima:");
-            while (!frases.empty())
-                System.out.println(frases.pop());
+            while (!texto.empty())
+                System.out.println(texto.pop());
 
             System.out.println("-----------------------------------");
             System.out.println("Top 10 frases:");
