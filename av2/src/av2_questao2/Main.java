@@ -16,7 +16,7 @@ public class Main {
         do {
             System.out.println("Menu:");
 
-            System.out.println("1- Inserir \n 2- Excluir \n 3- In-Ordem \n 4- Sair");
+            System.out.println("1- Inserir \n 2- Excluir \n 3- In-Ordem \n 4- Print Arvore \n 5- Sair");
 
             menu = scan.nextInt();
 
